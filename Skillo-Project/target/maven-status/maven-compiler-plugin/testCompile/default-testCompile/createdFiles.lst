@@ -1,0 +1,3 @@
+bg\skillo\main\BaseTest.class
+bg\skillo\positive\LoginTests.class
+bg\skillo\negative\LoginTests.class

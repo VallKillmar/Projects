@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-08-12T16:46:59 EEST" name="Suite1" finished-at="2024-08-12T16:49:29 EEST" duration-ms="149594">
+    <groups>
+    </groups>
+    <test started-at="2024-08-12T16:46:59 EEST" name="test1" finished-at="2024-08-12T16:47:41 EEST" duration-ms="41705">
+      <class name="bg.skillo.positive.LoginTests">
+        <test-method is-config="true" signature="setup()[pri:0, instance:bg.skillo.positive.LoginTests@4d9e68d0]" started-at="2024-08-12T16:46:59 EEST" name="setup" finished-at="2024-08-12T16:47:02 EEST" duration-ms="2878" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="successfullyLogin()[pri:0, instance:bg.skillo.positive.LoginTests@4d9e68d0]" started-at="2024-08-12T16:47:02 EEST" name="successfullyLogin" finished-at="2024-08-12T16:47:39 EEST" duration-ms="37029" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- successfullyLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:bg.skillo.positive.LoginTests@4d9e68d0]" started-at="2024-08-12T16:47:39 EEST" name="tearDown" finished-at="2024-08-12T16:47:41 EEST" duration-ms="1752" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- bg.skillo.positive.LoginTests -->
+    </test> <!-- test1 -->
+    <test started-at="2024-08-12T16:47:41 EEST" name="test2" finished-at="2024-08-12T16:49:29 EEST" duration-ms="107864">
+      <class name="bg.skillo.negative.LoginTests">
+        <test-method is-config="true" signature="setup()[pri:0, instance:bg.skillo.negative.LoginTests@130d63be]" started-at="2024-08-12T16:47:41 EEST" name="setup" finished-at="2024-08-12T16:47:42 EEST" duration-ms="1413" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="loginFailedWithNoCredentials()[pri:0, instance:bg.skillo.negative.LoginTests@130d63be]" started-at="2024-08-12T16:47:42 EEST" name="loginFailedWithNoCredentials" finished-at="2024-08-12T16:48:17 EEST" duration-ms="34872" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginFailedWithNoCredentials -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:bg.skillo.negative.LoginTests@130d63be]" started-at="2024-08-12T16:48:17 EEST" name="tearDown" finished-at="2024-08-12T16:48:17 EEST" duration-ms="189" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:bg.skillo.negative.LoginTests@130d63be]" started-at="2024-08-12T16:48:17 EEST" name="setup" finished-at="2024-08-12T16:48:19 EEST" duration-ms="1422" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="loginFailedWithWrongPassword()[pri:0, instance:bg.skillo.negative.LoginTests@130d63be]" started-at="2024-08-12T16:48:19 EEST" name="loginFailedWithWrongPassword" finished-at="2024-08-12T16:48:56 EEST" duration-ms="36716" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginFailedWithWrongPassword -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:bg.skillo.negative.LoginTests@130d63be]" started-at="2024-08-12T16:48:56 EEST" name="tearDown" finished-at="2024-08-12T16:48:56 EEST" duration-ms="142" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:bg.skillo.negative.LoginTests@130d63be]" started-at="2024-08-12T16:48:56 EEST" name="setup" finished-at="2024-08-12T16:48:57 EEST" duration-ms="1454" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="loginFailedWithWrongUser()[pri:0, instance:bg.skillo.negative.LoginTests@130d63be]" started-at="2024-08-12T16:48:57 EEST" name="loginFailedWithWrongUser" finished-at="2024-08-12T16:49:29 EEST" duration-ms="31482" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginFailedWithWrongUser -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:bg.skillo.negative.LoginTests@130d63be]" started-at="2024-08-12T16:49:29 EEST" name="tearDown" finished-at="2024-08-12T16:49:29 EEST" duration-ms="171" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- bg.skillo.negative.LoginTests -->
+    </test> <!-- test2 -->
+  </suite> <!-- Suite1 -->
+</testng-results>
