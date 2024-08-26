@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Webpage with Components and Buttons</title>
+    <style>
+        .component {
+            border: 1px solid #000;
+            padding: 20px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="component-1" class="component">
+        <h2>Component 1</h2>
+        <button class="component-button">Button</button>
+    </div>
+
+    <div id="component-2" class="component">
+        <h2>Component 2</h2>
+        <button class="component-button">Button</button>
+    </div>
+    
+    <div id="component-3" class="component">
+        <h2>Component 3</h2>
+        <button class="component-button">Button</button>
+    </div>
+
+    <script>
+        // Select all buttons with the class 'component-button'
+        const buttons = document.querySelectorAll('.component-button');
+
+        // Add an event listener to each button
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Change the background color of the button when it is clicked
+                button.style.backgroundColor = 'lightblue';
+            });
+        });
+    </script>
+</body>
+</html>
