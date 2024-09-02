@@ -2,6 +2,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageObjects.LoginForm;
 import pages.HomePage;
+import pages.LoginPage;
 
 public class LoginPageTest extends BaseTest{
 
@@ -20,15 +21,34 @@ public class LoginPageTest extends BaseTest{
     }
 
     @Test
+    public void testLoginButton(){
+        HomePage homePage = new HomePage(webDriver);
+        homePage.getHomeHeader().clickLoginButton();
+    }
+
+    @Test
     public void testHomePageThroughLogoButton(){
         HomePage homePage = new HomePage(webDriver);
         homePage.getHomeHeader().clickLogoButton();
     }
 
     @Test
-    public void placeHolderTest(){
+    public void userNamePlaceHolderTest(){
         String placeHolderText = loginPage.getLoginForm().getUserNamePlaceHolder();
         Assert.assertEquals(placeHolderText, "Username or email");
+    }
+
+    @Test
+    public void passwordPlaceHolderTest(){
+        String placeHolderText = loginPage.getLoginForm().getPasswordPlaceHolder();
+        Assert.assertEquals(placeHolderText, "Password");
+    }
+
+    @Test
+    public void clickOnRememberMeTest(){
+        LoginForm form = loginPage.getLoginForm();
+        form.tickOnRememberMe();
+        //verification needed
     }
 
     @Test

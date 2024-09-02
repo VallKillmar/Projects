@@ -5,12 +5,14 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import pages.LoginPage;
+import pages.SignUpPage;
 
 import java.time.Duration;
 
 public class BaseTest {
     protected WebDriver webDriver;
     protected LoginPage loginPage;
+    protected SignUpPage signUpPage;
 
     @BeforeMethod
     public void setupDriver(){
@@ -28,8 +30,8 @@ public class BaseTest {
         loginPage = new LoginPage(webDriver);
     }
 
-    @AfterMethod
-    public void browserClose(){
-        webDriver.quit();
-    }
+//    @AfterMethod
+//    public void browserClose(){
+//        webDriver.quit();
+//    }
 }

@@ -9,6 +9,7 @@ public class HomeHeader extends PageObject{
 //
     private WebElement homeButtonElement = searchContext.findElement(By.cssSelector("a#nav-link-home"));
     private WebElement logoHeaderElement = searchContext.findElement(By.cssSelector("img#homeIcon"));
+    private WebElement loginButtonElement = searchContext.findElement(By.cssSelector("a#nav-link-login"));
 
     public HomeHeader(WebElement searchContext) {
         super(searchContext);
@@ -20,6 +21,10 @@ public class HomeHeader extends PageObject{
 
     public void clickHomeButton(){
         homeButtonElement.click();
+    }
+
+    public void clickLoginButton(){
+        loginButtonElement.click();
     }
 
 }

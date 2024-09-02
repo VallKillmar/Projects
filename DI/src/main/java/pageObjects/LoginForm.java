@@ -10,6 +10,11 @@ public class LoginForm extends PageObject{
 
     private WebElement signInButtonElement = searchContext.findElement(By.cssSelector("button"));
 
+    private WebElement rememberMeCheckBoxElement = searchContext.findElement(By.cssSelector("input[type='checkbox']"));
+
+    private WebElement registerButtonElement = searchContext.findElement(By.cssSelector("p a"));
+
+
     public LoginForm(WebElement searchContext) {
         super(searchContext);
     }
@@ -24,7 +29,16 @@ public class LoginForm extends PageObject{
         return userNameInputElement.getAttribute("placeholder");
     }
 
-    public String getUserNameActualValue(){
-        return userNameInputElement.getText();
+    public String getPasswordPlaceHolder(){
+        return passwordInputElement.getAttribute("placeholder");
     }
+
+    public void tickOnRememberMe(){
+        rememberMeCheckBoxElement.click();
+    }
+
+    public void clickOnRegisterButton(){
+        registerButtonElement.click();
+    }
+
 }
