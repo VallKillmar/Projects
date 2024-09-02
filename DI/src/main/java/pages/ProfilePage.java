@@ -2,9 +2,9 @@ package pages;
 
 import org.openqa.selenium.WebDriver;
 
-public class HomePage extends BasePage{
+public class ProfilePage extends BasePage{
 
-    public HomePage(WebDriver driver) {
+    public ProfilePage(WebDriver driver) {
         super(driver);
     }
 }

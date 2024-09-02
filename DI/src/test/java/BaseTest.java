@@ -1,5 +1,6 @@
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
@@ -11,9 +12,12 @@ public class BaseTest {
     protected WebDriver webDriver;
     protected LoginPage loginPage;
 
-    @BeforeTest
+    @BeforeMethod
     public void setupDriver(){
-        webDriver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--disable-search-engine-choice-screen");
+
+        webDriver = new ChromeDriver(options);
         webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         webDriver.manage().window().maximize();
         webDriver.get("http://training.skillo-bg.com:4200/users/login");
@@ -24,8 +28,8 @@ public class BaseTest {
         loginPage = new LoginPage(webDriver);
     }
 
-//    @AfterMethod
-//    public void browserClose(){
-//        webDriver.quit();
-//    }
+    @AfterMethod
+    public void browserClose(){
+        webDriver.quit();
+    }
 }

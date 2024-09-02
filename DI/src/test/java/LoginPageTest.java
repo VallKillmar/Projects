@@ -1,31 +1,28 @@
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pageObjects.Header;
 import pageObjects.LoginForm;
 import pages.HomePage;
-import pages.LoginPage;
 
 public class LoginPageTest extends BaseTest{
 
     @Test
-    public void testLoginPage() throws InterruptedException {
+    public void testLoginPage(){
         LoginForm form = loginPage.getLoginForm();
         form.login("te4eto", "astigae");
 //        Thread.sleep(2000);
-        loginPage.getHeader().clickProfileButton();
+        loginPage.getProfileHeader().clickProfileButton();
     }
 
     @Test
     public void testHomePageButton(){
         HomePage homePage = new HomePage(webDriver);
-        homePage.getHeader().clickHomeButton();
+        homePage.getHomeHeader().clickHomeButton();
     }
 
     @Test
     public void testHomePageThroughLogoButton(){
         HomePage homePage = new HomePage(webDriver);
-        homePage.getHeader().clickLogoButton();
+        homePage.getHomeHeader().clickLogoButton();
     }
 
     @Test

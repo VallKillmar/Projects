@@ -1,14 +1,11 @@
 package pages;
 
-import org.checkerframework.checker.units.qual.C;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import pageObjects.Footer;
-import pageObjects.Header;
-
-import java.sql.Driver;
+import pageObjects.HomeHeader;
+import pageObjects.ProfileHeader;
 
 public abstract class BasePage {
 
@@ -19,9 +16,14 @@ public abstract class BasePage {
 
     }
 
-    public Header getHeader(){
-        WebElement headerElement = driver.findElement(By.cssSelector("header.header-container"));
-        return new Header(headerElement);
+    public HomeHeader getHomeHeader(){
+        WebElement headerElement = driver.findElement(By.cssSelector("nav.navbar"));
+        return new HomeHeader(headerElement);
+    }
+
+    public ProfileHeader getProfileHeader(){
+        WebElement headerElement = driver.findElement(By.cssSelector("nav.navbar"));
+        return new ProfileHeader(headerElement);
     }
 
     public Footer getFooter(){

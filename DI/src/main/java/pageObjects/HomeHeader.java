@@ -3,15 +3,14 @@ package pageObjects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-public class Header extends PageObject{
+public class HomeHeader extends PageObject{
 
 //    private WebElement logoElement = searchContext.findElement(By.cssSelector("logo"));
 //
     private WebElement homeButtonElement = searchContext.findElement(By.cssSelector("a#nav-link-home"));
-    private WebElement profileButtonElement = searchContext.findElement(By.cssSelector("a#nav-link-profile"));
     private WebElement logoHeaderElement = searchContext.findElement(By.cssSelector("img#homeIcon"));
 
-    public Header(WebElement searchContext) {
+    public HomeHeader(WebElement searchContext) {
         super(searchContext);
     }
 
@@ -23,7 +22,4 @@ public class Header extends PageObject{
         homeButtonElement.click();
     }
 
-    public void clickProfileButton(){
-        profileButtonElement.click();
-    }
 }
