@@ -8,14 +8,8 @@ import pageObjects.SignUpForm;
 
 public class SignUpPage extends BasePage{
 
-    private WebElement signUpForm = driver.findElement(By.cssSelector("form.form-container"));
-
     public SignUpPage(WebDriver driver) {
         super(driver);
-    }
-
-    public SignUpForm getSignUpForm(){
-        return new SignUpForm(signUpForm);
     }
 
 }

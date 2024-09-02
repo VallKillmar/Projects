@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import pageObjects.Footer;
 import pageObjects.HomeHeader;
 import pageObjects.ProfileHeader;
+import pageObjects.SignUpForm;
 
 public abstract class BasePage {
 
@@ -29,5 +30,10 @@ public abstract class BasePage {
     public Footer getFooter(){
         WebElement footerElement = driver.findElement(By.cssSelector("footer.d-none"));
         return new Footer(footerElement);
+    }
+
+    public SignUpForm getSignUpForm(){
+        WebElement signUpForm = driver.findElement(By.cssSelector("form.form-container"));
+        return new SignUpForm(signUpForm);
     }
 }

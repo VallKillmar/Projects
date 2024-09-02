@@ -18,4 +18,5 @@ public class SignUpForm extends PageObject {
         return confirmPasswordElement.getAttribute("placeholder");
     }
 
+
 }
