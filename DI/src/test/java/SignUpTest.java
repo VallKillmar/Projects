@@ -17,6 +17,9 @@ public class SignUpTest extends BaseTest{
         Assert.assertEquals(placeHolderText, "Confirm Password");
     }
 
+    @Test
+    public void checkTheUsernameValidationMessage(){
 
+    }
 
 }

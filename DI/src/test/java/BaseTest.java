@@ -12,7 +12,6 @@ import java.time.Duration;
 public class BaseTest {
     protected WebDriver webDriver;
     protected LoginPage loginPage;
-//    protected SignUpPage signUpPage;
 
     @BeforeMethod
     public void setupDriver(){
@@ -29,11 +28,6 @@ public class BaseTest {
     public void setupLoginPage(){
         loginPage = new LoginPage(webDriver);
     }
-
-//    @BeforeMethod
-//    public void setupSignUpPage(){
-//        signUpPage = new SignUpPage(webDriver);
-//    }
 
     @AfterMethod
     public void browserClose(){
