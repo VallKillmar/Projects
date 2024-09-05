@@ -8,7 +8,7 @@ public abstract class PageObject {
     protected WebElement searchContext;
 
     public PageObject(WebElement searchContext) {
-        PageFactory.initElements(searchContext,this);
+//        PageFactory.initElements(searchContext,this);
         this.searchContext = searchContext;
     }
 }

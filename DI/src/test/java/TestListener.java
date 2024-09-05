@@ -1,25 +1,20 @@
-package Utils;
-
+import Utils.Screenshot;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
-import org.testng.internal.BaseTestMethod;
-import pages.BasePage;
 
 public class TestListener implements ITestListener{
 
     private WebDriver webDriver;
 
-    // This method will be invoked when a test fails
     @Override
-    public void onTestFailure(ITestResult result) {
+    public void onTestFailure(ITestResult testResult) {
         // Capture the WebDriver instance from the test class
-        Object currentClass = result.getInstance();
+        Object currentClass = testResult.getInstance();
         webDriver = ((BaseTest) currentClass).getDriver();
-
         // Capture the screenshot
-        String methodName = result.getMethod().getMethodName();
+        String methodName = testResult.getMethod().getMethodName();
         Screenshot.captureScreenshot(webDriver, methodName);
     }
 

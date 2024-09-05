@@ -13,10 +13,10 @@ import java.util.Date;
 public class Screenshot {
 
     public static void captureScreenshot(WebDriver driver, String screenshotName) {
-        // Create a unique filename using the current timestamp
+
         String timestamp = new SimpleDateFormat("yyyy_MM_dd__hh_mm_ss").format(new Date());
         File source = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        String destination = "D://screenshots/" + screenshotName + "_" + timestamp + ".png";
+        String destination = "src/test/resources/screenshots/" + screenshotName + "_" + timestamp + ".png";
 
         try {
             FileHandler.copy(source, new File(destination));

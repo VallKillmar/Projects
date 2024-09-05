@@ -4,14 +4,21 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Listeners;
 import pages.LoginPage;
 import pages.SignUpPage;
-
+import java.io.IOException;
 import java.time.Duration;
+
+@Listeners(TestListener.class)
 
 public class BaseTest {
     protected WebDriver webDriver;
     protected LoginPage loginPage;
+
+    public WebDriver getDriver() {
+        return webDriver;
+    }
 
     @BeforeMethod
     public void setupDriver(){
@@ -33,4 +40,5 @@ public class BaseTest {
     public void browserClose(){
         webDriver.quit();
     }
+
 }

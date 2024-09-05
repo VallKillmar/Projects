@@ -14,7 +14,7 @@ public class SignUpTest extends BaseTest{
         loginPage.getLoginForm().clickOnRegisterButton();
         SignUpPage signUpPage = new SignUpPage(webDriver);
         String placeHolderText = signUpPage.getSignUpForm().getConfirmPasswordPlaceHolder();
-        Assert.assertEquals(placeHolderText, "Confirm Password");
+        Assert.assertEquals(placeHolderText, "Confirma Password");
     }
 
     @Test
