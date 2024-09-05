@@ -8,10 +8,10 @@ import pageObjects.LoginForm;
 
 public class LoginPage extends BasePage{
 
-    private WebElement signInForm = driver.findElement(By.cssSelector("form.form-container"));
+//    private WebElement signInForm = driver.findElement(By.cssSelector("form.form-container"));
 
-//    @FindBy(css = "form.form-container")
-//    private WebElement signInForm1;
+    @FindBy(css = "form.form-container")
+    private WebElement signInForm;
 
 
     public LoginPage(WebDriver driver) {
