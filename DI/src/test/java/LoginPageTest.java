@@ -2,7 +2,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageObjects.LoginForm;
 import pages.HomePage;
-import pages.LoginPage;
+import pages.ProfilePage;
 
 public class LoginPageTest extends BaseTest{
 
@@ -12,6 +12,8 @@ public class LoginPageTest extends BaseTest{
         form.login("te4eto", "astigae");
 //        Thread.sleep(2000);
         loginPage.getProfileHeader().clickProfileButton();
+        ProfilePage profilePage = new ProfilePage(webDriver);
+//        profilePage;
     }
 
     @Test
@@ -24,6 +26,7 @@ public class LoginPageTest extends BaseTest{
     public void testLoginButton(){
         HomePage homePage = new HomePage(webDriver);
         homePage.getHomeHeader().clickLoginButton();
+        new ProfilePage(webDriver).
     }
 
     @Test

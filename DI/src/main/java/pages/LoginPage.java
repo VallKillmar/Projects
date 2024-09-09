@@ -5,8 +5,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import pageObjects.LoginForm;
+import pageObjects.ProfileHeader;
 
-public class LoginPage extends BasePage{
+public class LoginPage extends CommonPage{
 
 //    private WebElement signInForm = driver.findElement(By.cssSelector("form.form-container"));
 
@@ -20,5 +21,10 @@ public class LoginPage extends BasePage{
 
     public LoginForm getLoginForm(){
         return new LoginForm(signInForm);
+    }
+
+    public ProfileHeader getProfileHeader(){
+        WebElement headerElement = driver.findElement(By.cssSelector("nav.navbar"));
+        return new ProfileHeader(headerElement);
     }
 }

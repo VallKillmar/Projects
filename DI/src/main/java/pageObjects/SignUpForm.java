@@ -43,5 +43,9 @@ public class SignUpForm extends PageObject {
         return invalidUsernameFeedbackElement.getText();
     }
 
+    public void signUp(String userName, String password, String email){
+        usernamePlaceholderElement.sendKeys(userName);
+        confirmPasswordPlaceholderElement.sendKeys(password);
+    }
 
 }
