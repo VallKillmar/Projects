@@ -10,16 +10,37 @@ public class SignUpForm extends PageObject {
 
 //    private WebElement signUpSignElement = searchContext.findElement(By.cssSelector("h4.text-center"));
 
-//    private WebElement confirmPasswordElement = searchContext.findElement(By.cssSelector("input#defaultRegisterPhonePassword"));
     @FindBy(css = "input#defaultRegisterPhonePassword")
-    private WebElement confirmPasswordElement;
+    private WebElement confirmPasswordPlaceholderElement;
+
+    @FindBy(css = "form div.input-filed:first-of-type input")
+    private WebElement usernamePlaceholderElement;
+
+    @FindBy(css = "form div.input-filed:first-of-type span")
+    private WebElement invalidUsernameFeedbackElement;
 
     public SignUpForm(WebElement searchContext) {
         super(searchContext);
     }
 
     public String getConfirmPasswordPlaceHolder(){
-        return confirmPasswordElement.getAttribute("placeholder");
+        return confirmPasswordPlaceholderElement.getAttribute("placeholder");
+    }
+
+    public void clickOnConfirmPasswordPlaceHolder(){
+        confirmPasswordPlaceholderElement.click();
+    }
+
+    public String getUsernamePlaceholder(){
+        return usernamePlaceholderElement.getAttribute("placeholder");
+    }
+
+    public void clickOnUsernameElement(){
+        usernamePlaceholderElement.click();
+    }
+
+    public String getInvalidUsernameFeedbackText(){
+        return invalidUsernameFeedbackElement.getText();
     }
 
 

@@ -10,7 +10,6 @@ public class ProfileHeader extends PageObject{
         super(searchContext);
     }
 
-//    private WebElement profileButtonElement = searchContext.findElement(By.cssSelector("a#nav-link-profile"));
     @FindBy(css = "a#nav-link-profile")
     private WebElement profileButtonElement;
 

@@ -9,7 +9,6 @@ public class Footer extends PageObject{
         super(searchContext);
     }
 
-//    private WebElement versionStampElement = searchContext.findElement(By.cssSelector("div.col-5 div"));
     @FindBy(css = "div.col-5 div")
     private WebElement versionStampElement;
 
