@@ -15,7 +15,8 @@ public class LoginPageTest extends BaseTest{
 //        Thread.sleep(2000);
         loginPage.getProfileHeader().clickProfileButton();
         ProfilePage profilePage = new ProfilePage(webDriver);
-        profilePage.getProfileForm().getEditProfilePicElementAppears();
+        String className = profilePage.getProfileForm().getEditProfilePicElementAppears();
+        Assert.assertEquals(className, "edit-profile-pic ng-star-inserted");
     }
 
     @Test
