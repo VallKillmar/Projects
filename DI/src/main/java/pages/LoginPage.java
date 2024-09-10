@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.RemoteWebElement;
 import org.openqa.selenium.support.FindBy;
 import pageObjects.LoginForm;
 import pageObjects.ProfileHeader;
@@ -14,6 +15,8 @@ public class LoginPage extends CommonPage{
     @FindBy(css = "form.form-container")
     private WebElement signInForm;
 
+    @FindBy(css = "nav.navbar")
+    private WebElement headerElement;
 
     public LoginPage(WebDriver driver) {
         super(driver);
@@ -24,7 +27,6 @@ public class LoginPage extends CommonPage{
     }
 
     public ProfileHeader getProfileHeader(){
-        WebElement headerElement = driver.findElement(By.cssSelector("nav.navbar"));
         return new ProfileHeader(headerElement);
     }
 }

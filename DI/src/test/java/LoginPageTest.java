@@ -1,6 +1,8 @@
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageObjects.LoginForm;
+import pageObjects.PageObject;
+import pageObjects.ProfileForm;
 import pages.HomePage;
 import pages.ProfilePage;
 
@@ -13,7 +15,7 @@ public class LoginPageTest extends BaseTest{
 //        Thread.sleep(2000);
         loginPage.getProfileHeader().clickProfileButton();
         ProfilePage profilePage = new ProfilePage(webDriver);
-//        profilePage;
+        profilePage.getProfileForm().getEditProfilePicElementAppears();
     }
 
     @Test
@@ -26,7 +28,6 @@ public class LoginPageTest extends BaseTest{
     public void testLoginButton(){
         HomePage homePage = new HomePage(webDriver);
         homePage.getHomeHeader().clickLoginButton();
-        new ProfilePage(webDriver).
     }
 
     @Test

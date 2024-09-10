@@ -6,6 +6,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
 import pages.LoginPage;
+import pages.ProfilePage;
 import pages.SignUpPage;
 import java.io.IOException;
 import java.time.Duration;

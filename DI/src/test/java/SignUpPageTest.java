@@ -1,5 +1,6 @@
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import pages.ProfilePage;
 import pages.SignUpPage;
 
 public class SignUpPageTest extends BaseTest{
