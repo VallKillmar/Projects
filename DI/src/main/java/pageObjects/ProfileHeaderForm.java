@@ -45,4 +45,7 @@ public class ProfileHeaderForm extends PageObject {
         searchBarInputElement.sendKeys(searchKeyword);
     }
 
+    public String getResultUserFromDropDown(){
+        return userProfileButtonOnDropDownElement.getText();
+    }
 }

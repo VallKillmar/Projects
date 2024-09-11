@@ -1,3 +1,4 @@
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageObjects.ProfileHeaderForm;
 import pages.HomePage;
@@ -28,6 +29,6 @@ public class HeaderTest extends BaseTest{
         loginPage.loginToTheSystem();
         ProfilePage profilePage = new ProfilePage(webDriver);
         profilePage.getFullHeader().searchForUser("test");
-
+        Assert.assertEquals(profilePage.getFullHeader().getResultUserFromDropDown(),"TestUserUserUserUser");
     }
 }
