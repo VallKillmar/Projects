@@ -17,6 +17,7 @@ public class ProfilePage extends CommonPage{
     }
 
     public ProfileForm getProfileForm(){
+        wait.until(webDriver -> profileForm.isDisplayed());
         return new ProfileForm(profileForm);
     }
 
