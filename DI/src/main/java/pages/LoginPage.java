@@ -1,12 +1,10 @@
 package pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.RemoteWebElement;
 import org.openqa.selenium.support.FindBy;
 import pageObjects.LoginForm;
-import pageObjects.ProfileHeader;
+import pageObjects.ProfileHeaderForm;
 
 public class LoginPage extends CommonPage{
 
@@ -26,7 +24,7 @@ public class LoginPage extends CommonPage{
         return new LoginForm(signInForm);
     }
 
-    public ProfileHeader getProfileHeader(){
-        return new ProfileHeader(headerElement);
+    public ProfileHeaderForm getProfileHeader(){
+        return new ProfileHeaderForm(headerElement);
     }
 }

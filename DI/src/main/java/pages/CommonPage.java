@@ -1,17 +1,14 @@
 package pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.RemoteWebElement;
 import org.openqa.selenium.support.FindBy;
 import pageObjects.Footer;
-import pageObjects.HomeHeader;
-import pageObjects.ProfileHeader;
+import pageObjects.HomeHeaderForm;
 
 public class CommonPage extends BasePage{
 
-    @FindBy(css = "nav.navbar")
+    @FindBy(css = "header.header-container")
     private WebElement headerElement;
 
     @FindBy(css = "footer.d-none")
@@ -21,8 +18,8 @@ public class CommonPage extends BasePage{
         super(driver);
     }
 
-    public HomeHeader getHomeHeader(){
-        return new HomeHeader(headerElement);
+    public HomeHeaderForm getHeader(){
+        return new HomeHeaderForm(headerElement);
     }
 
     public Footer getFooter(){

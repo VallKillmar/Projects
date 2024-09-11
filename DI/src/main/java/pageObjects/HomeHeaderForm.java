@@ -1,12 +1,9 @@
 package pageObjects;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.remote.RemoteWebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class HomeHeader extends PageObject{
+public class HomeHeaderForm extends PageObject{
 
 //    private WebElement logoElement = searchContext.findElement(By.cssSelector("logo"));
 
@@ -19,7 +16,7 @@ public class HomeHeader extends PageObject{
     @FindBy(css = "a#nav-link-login")
     private WebElement loginButtonElement;
 
-    public HomeHeader(WebElement searchContext) {
+    public HomeHeaderForm(WebElement searchContext) {
         super(searchContext);
     }
 
