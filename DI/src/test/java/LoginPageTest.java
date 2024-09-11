@@ -7,10 +7,10 @@ import pages.CommonPage;
 import pages.HomePage;
 import pages.ProfilePage;
 
-public class LoginPageTest extends BaseTest{
+public class LoginPageTest extends BaseTest {
 
     @Test
-    public void testLoginPage(){
+    public void testLoginPage() {
 //        Thread.sleep(2000);
         loginPage.loginToTheSystem();
         loginPage.getProfileHeader().clickProfileButton();
@@ -20,23 +20,21 @@ public class LoginPageTest extends BaseTest{
     }
 
     @Test
-    public void userNamePlaceHolderTest(){
+    public void userNamePlaceHolderTest() {
         String placeHolderText = loginPage.getLoginForm().getUserNamePlaceHolder();
         Assert.assertEquals(placeHolderText, "Username or email");
     }
 
     @Test
-    public void passwordPlaceHolderTest(){
+    public void passwordPlaceHolderTest() {
         String placeHolderText = loginPage.getLoginForm().getPasswordPlaceHolder();
         Assert.assertEquals(placeHolderText, "Password");
     }
 
     @Test
-    public void clickOnRememberMeTest(){
+    public void clickOnRememberMeTest() {
         LoginForm form = loginPage.getLoginForm();
         form.tickOnRememberMe();
-
-        //verification needed
+        Assert.assertTrue(form.verifyRememberMeIsTicked(),"the checkbox is not ticked");
     }
-
 }

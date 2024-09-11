@@ -1,10 +1,7 @@
 package pageObjects;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.RemoteWebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class LoginForm extends PageObject{
 
@@ -22,7 +19,6 @@ public class LoginForm extends PageObject{
 
     @FindBy(css = "p a")
     private WebElement registerButtonElement;
-
 
     public LoginForm(WebElement searchContext) {
         super(searchContext);
@@ -44,6 +40,10 @@ public class LoginForm extends PageObject{
 
     public void tickOnRememberMe(){
         rememberMeCheckBoxElement.click();
+    }
+
+    public boolean verifyRememberMeIsTicked(){
+        return rememberMeCheckBoxElement.isSelected();
     }
 
     public void clickOnRegisterButton(){
