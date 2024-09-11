@@ -21,7 +21,6 @@ public class SignUpPageTest extends BaseTest{
         signUpPage.getSignUpForm().clickOnConfirmPasswordPlaceHolder();
         String invalidFeedbackText = signUpPage.getSignUpForm().getInvalidUsernameFeedbackText();
         Assert.assertEquals(invalidFeedbackText,"This field is required!");
-
     }
 
 }

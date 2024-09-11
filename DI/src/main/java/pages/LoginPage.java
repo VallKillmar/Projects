@@ -27,4 +27,5 @@ public class LoginPage extends CommonPage{
     public ProfileHeaderForm getProfileHeader(){
         return new ProfileHeaderForm(headerElement);
     }
+
 }

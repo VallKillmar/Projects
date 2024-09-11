@@ -10,4 +10,12 @@ public class FooterTest extends BaseTest{
         String versionText = homePage.getFooter().getVersionText();
         Assert.assertEquals(versionText,"Version: 2020.3.1.4200");
     }
+
+    @Test
+    public void footerVersionCheckWhenLoggedIn(){
+        loginPage.loginToTheSystem();
+        HomePage homePage = new HomePage(webDriver);
+        String versionText = homePage.getFooter().getVersionText();
+        Assert.assertEquals(versionText,"Version: 2020.3.1.4200");
+    }
 }
