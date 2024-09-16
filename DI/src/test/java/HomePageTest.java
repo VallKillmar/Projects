@@ -10,4 +10,10 @@ public class HomePageTest extends BaseTest{
         homePage.getHomePageMainElement().listOfAllPostElements();
     }
 
+    @Test
+    public void testScrollHomePage(){
+        HomePage homePage = new HomePage(webDriver);
+        homePage.getHeader().clickHomeButton();
+        homePage.getHomePageMainElement().scrollToTheBottom();
+    }
 }

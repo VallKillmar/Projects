@@ -8,11 +8,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public abstract class PageObject {
     protected WebElement searchContext;
-    protected WebDriverWait wait;
 
     public PageObject(WebElement searchContext) {
         PageFactory.initElements(searchContext,this);
         this.searchContext = searchContext;
+
     }
 
 }
