@@ -15,6 +15,6 @@ public class HomePage extends CommonPage{
     }
 
     public HomeObjects getHomePageMainElement(){
-        return new HomeObjects(homePageMainElement, driver);
+        return new HomeObjects(homePageMainElement);
     }
 }

@@ -2,6 +2,7 @@ package pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import pageObjects.Footer;
 import pageObjects.HomeHeaderForm;
@@ -38,6 +39,11 @@ public class CommonPage extends BasePage{
         loginPage = new LoginPage(driver);
         LoginForm form = loginPage.getLoginForm();
         form.login("te4eto", "astigae");
+    }
+
+    public void scrollToTheBottom(){
+        Actions actions = new Actions(driver);
+        actions.moveToElement(footerElement).perform();
     }
 
 }

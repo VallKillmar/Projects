@@ -1,4 +1,6 @@
+import org.testng.Assert;
 import org.testng.annotations.Test;
+import pages.CommonPage;
 import pages.HomePage;
 
 public class HomePageTest extends BaseTest{
@@ -14,6 +16,6 @@ public class HomePageTest extends BaseTest{
     public void testScrollHomePage(){
         HomePage homePage = new HomePage(webDriver);
         homePage.getHeader().clickHomeButton();
-        homePage.getHomePageMainElement().scrollToTheBottom();
+        homePage.scrollToTheBottom();
     }
 }

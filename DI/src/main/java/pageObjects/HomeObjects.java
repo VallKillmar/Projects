@@ -10,17 +10,11 @@ import java.util.List;
 
 public class HomeObjects extends PageObject{
 
-    @FindBy(css = "footer.d-none")
-    private WebElement footerElement;
-
     @FindBy(css = "a.post-user")
     private List<WebElement> postElement;
 
-    private WebDriver driver;
-
-    public HomeObjects(WebElement searchContext, WebDriver driver) {
+    public HomeObjects(WebElement searchContext) {
         super(searchContext);
-        this.driver = driver;
     }
 
     public void listOfAllPostElements(){
@@ -30,8 +24,4 @@ public class HomeObjects extends PageObject{
         }
     }
 
-    public void scrollToTheBottom(){
-        Actions actions = new Actions(driver);
-        actions.moveToElement(footerElement).perform();
-    }
 }
