@@ -5,8 +5,6 @@ import org.openqa.selenium.support.FindBy;
 
 public class HomeHeaderForm extends PageObject{
 
-//    private WebElement logoElement = searchContext.findElement(By.cssSelector("logo"));
-
     @FindBy(css = "a#nav-link-home")
     private WebElement homeButtonElement;
 
