@@ -5,4 +5,24 @@
             <class name="LoginPageTest"/>
         </classes>
     </test>
+    <test name="test2">
+        <classes>
+            <class name="SignUpPageTest"/>
+        </classes>
+    </test>
+    <test name="test3">
+    <classes>
+        <class name="HomePageTest"/>
+    </classes>
+    </test>
+    <test name="test4">
+    <classes>
+        <class name="HeaderTest"/>
+    </classes>
+    </test>
+    <test name="test5">
+        <classes>
+            <class name="FooterTest"/>
+        </classes>
+    </test>
 </suite>
