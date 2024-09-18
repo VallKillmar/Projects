@@ -1,6 +1,4 @@
-import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.CommonPage;
 import pages.HomePage;
 
 public class HomePageTest extends BaseTest{
@@ -9,7 +7,10 @@ public class HomePageTest extends BaseTest{
     public void testListPostWebElements(){
         HomePage homePage = new HomePage(webDriver);
         homePage.getHeader().clickHomeButton();
-        homePage.getHomePageMainElement().listOfAllPostElements();
+        homePage.getHomePageMainElement().takeListOfAllPostElements();
+        homePage.scrollToTheBottom();
+        homePage.loaderIndicatorWait();
+        homePage.getHomePageMainElement().takeListOfAllPostElements();
     }
 
     @Test
