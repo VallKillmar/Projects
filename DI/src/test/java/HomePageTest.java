@@ -9,7 +9,7 @@ public class HomePageTest extends BaseTest{
         homePage.getHeader().clickHomeButton();
         homePage.getHomePageMainElement().takeListOfAllPostElements();
         homePage.scrollToTheBottom();
-        homePage.loaderIndicatorWait();
+        homePage.waitLoaderIndicator();
         homePage.getHomePageMainElement().takeListOfAllPostElements();
     }
 

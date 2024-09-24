@@ -22,7 +22,7 @@ public class HomePage extends CommonPage{
         return new HomeObjects(homePageMainElement);
     }
 
-    public void loaderIndicatorWait(){
+    public void waitLoaderIndicator(){
         wait.until(ExpectedConditions.visibilityOf(loaderElement));
         wait.until(ExpectedConditions.invisibilityOf(loaderElement));
     }
