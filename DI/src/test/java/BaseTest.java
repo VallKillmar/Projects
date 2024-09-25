@@ -37,9 +37,9 @@ public class BaseTest {
         loginPage = new LoginPage(webDriver);
     }
 
-//    @AfterMethod
-//    public void browserClose(){
-//        webDriver.quit();
-//    }
+    @AfterMethod
+    public void browserClose(){
+        webDriver.quit();
+    }
 
 }
