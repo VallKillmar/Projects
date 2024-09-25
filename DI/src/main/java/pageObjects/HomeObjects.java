@@ -2,8 +2,6 @@ package pageObjects;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
@@ -16,7 +14,7 @@ public class HomeObjects extends PageObject{
         super(searchContext);
     }
 
-    public void takeListOfAllPostElements(){
+    public void takeListOfAllPostedElements(){
         List<WebElement> postElements = postElement;
         for(WebElement postObject : postElements){
             System.out.println(postObject.getText()); // further list implementation

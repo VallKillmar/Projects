@@ -48,4 +48,8 @@ public class ProfileHeaderForm extends PageObject {
     public String getResultUserFromDropDown(){
         return userProfileButtonOnDropDownElement.getText();
     }
+
+    public void clickOnNewPostButtonElement(){
+        newPostButtonElement.click();
+    }
 }
