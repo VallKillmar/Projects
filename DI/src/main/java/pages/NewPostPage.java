@@ -3,9 +3,8 @@ package pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import pageObjects.PageObject;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import pageObjects.PostForm;
-import pageObjects.ProfileForm;
 
 public class NewPostPage extends CommonPage{
 
