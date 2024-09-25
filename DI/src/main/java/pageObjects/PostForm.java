@@ -11,7 +11,7 @@ public class PostForm extends PageObject{
     @FindBy(css = "input.file")
     private WebElement uploadPictureInputElement;
 
-        @FindBy(css = "span.custom-switch")
+    @FindBy(css = "span.custom-switch")
     private WebElement privatePublicSwitchElement;
 
     @FindBy(css = "button#create-post")

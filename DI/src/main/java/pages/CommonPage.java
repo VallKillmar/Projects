@@ -1,9 +1,11 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import pageObjects.Footer;
 import pageObjects.HomeHeaderForm;
 import pageObjects.LoginForm;
@@ -18,6 +20,9 @@ public class CommonPage extends BasePage{
 
     @FindBy(css = "footer.d-none")
     private WebElement footerElement;
+
+    @FindBy(css = ".toast-message")
+    private WebElement toastValidationMessageElement;
 
     public CommonPage(WebDriver driver) {
         super(driver);
@@ -46,4 +51,11 @@ public class CommonPage extends BasePage{
         actions.moveToElement(footerElement).perform();
     }
 
+    public void waitToastValidationMessage(){
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".toast-message")));
+    }
+
+    public String getToastValidationMessageElementText(){
+        return toastValidationMessageElement.getText();
+    }
 }
