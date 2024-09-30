@@ -26,7 +26,7 @@ public class PostForm extends PageObject{
     }
 
     public void sendFileToPictureInputElement(){
-        String fileName = "C:/Users/val_k/Desktop/Screen.jpg";
+        String fileName = "C:/Screen.jpg";
         uploadPictureInputElement.sendKeys(fileName);
     }
 
