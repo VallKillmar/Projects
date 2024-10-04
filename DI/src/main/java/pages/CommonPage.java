@@ -51,6 +51,10 @@ public class CommonPage extends BasePage{
         actions.moveToElement(footerElement).perform();
     }
 
+    public String getToastValidationMessageElementText(){
+        return toastValidationMessageElement.getText();
+    }
+
     public void waitToastValidationMessageVisibility(){
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".toast-message")));
     }
@@ -59,7 +63,4 @@ public class CommonPage extends BasePage{
         wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector(".toast-message")));
     }
 
-    public String getToastValidationMessageElementText(){
-        return toastValidationMessageElement.getText();
-    }
 }
